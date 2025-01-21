@@ -8,4 +8,5 @@ ui.adaptivezoom.scrollmode.exponential.4=Zoom sensetivity mode: Decrease by expo
 
 key.adaptivezoom.zoom=Zoom
 key.adaptivezoom.toggle=Toggle Mode
-key.categories.adaptivezoom=Adaptive Zoom Keybinds
+key.adaptivezoom.config=Toggle Mode
+key.categories.adaptivezoom=Open config

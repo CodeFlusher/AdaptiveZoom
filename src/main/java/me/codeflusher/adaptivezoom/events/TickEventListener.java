@@ -1,14 +1,11 @@
 package me.codeflusher.adaptivezoom.events;
 
-import me.codeflusher.adaptivezoom.data.ScrollData;
 import me.codeflusher.adaptivezoom.data.SensMode;
 import me.codeflusher.adaptivezoom.data.ToggledData;
 import me.codeflusher.adaptivezoom.settings.ModKeyBinds;
-import me.codeflusher.adaptivezoom.utils.Utils;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
-import org.lwjgl.input.Mouse;
 
 public class TickEventListener {
 

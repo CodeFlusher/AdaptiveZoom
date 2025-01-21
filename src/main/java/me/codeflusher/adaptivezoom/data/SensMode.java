@@ -12,7 +12,7 @@ public class SensMode {
         this.translateString = translateString;
     }
 
-    public String getTranslated(){
+    public String getTranslated() {
         return I18n.format(this.translateString);
     }
 

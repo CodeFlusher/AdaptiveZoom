@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(value = EntityViewRenderEvent.FOVModifier.class, remap = false)
-public abstract class MixinFOVModifier extends EntityViewRenderEvent{
+public abstract class MixinFOVModifier extends EntityViewRenderEvent {
 
     @Shadow
     private float fov;
@@ -22,10 +22,10 @@ public abstract class MixinFOVModifier extends EntityViewRenderEvent{
         super(renderer, entity, block, renderPartialTicks);
     }
 
-    @Inject(at=@At("HEAD"), method = "getFOV", cancellable = true)
-    public void injectFovModification(CallbackInfoReturnable<Float> cir){
+    @Inject(at = @At("HEAD"), method = "getFOV", cancellable = true)
+    public void injectFovModification(CallbackInfoReturnable<Float> cir) {
         if (ModKeyBinds.zoom.isKeyDown()) {
-            cir.setReturnValue(fov/(1+ScrollData.getScroll()));
+            cir.setReturnValue(fov / (1 + ScrollData.getScroll()));
         }
     }
 }
