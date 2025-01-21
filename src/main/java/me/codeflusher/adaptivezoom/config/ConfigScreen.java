@@ -21,7 +21,8 @@ public class ConfigScreen extends GuiScreen {
         this.buttonList.add(new GuiCheckBox(3, this.width / 2 - 100, this.height / 6 + 24*4, "Use exponential with base 2", ModConfig.useExponent2));
         this.buttonList.add(new GuiCheckBox(4, this.width / 2 - 100, this.height / 6 + 24*5, "Use exponential with base 3", ModConfig.useExponent3));
         this.buttonList.add(new GuiCheckBox(5, this.width / 2 - 100, this.height / 6 + 24*6, "Use exponential with base 4", ModConfig.useExponent4));
-        this.buttonList.add(new GuiButton(6, this.width / 2 - 100, this.height / 6 + 24*7, "Go back"));
+        this.buttonList.add(new GuiCheckBox(6, this.width / 2 - 100, this.height / 6 + 24*7, "Use cinematic camera in zoom", ModConfig.useCinematic));
+        this.buttonList.add(new GuiButton(7, this.width / 2 - 100, this.height / 6 + 24*8, "Go back"));
     }
 
     @Override
@@ -44,6 +45,9 @@ public class ConfigScreen extends GuiScreen {
                 break;
             case 5:
                 ModConfig.useExponent4 = !ModConfig.useExponent4;
+                break;
+            case 6:
+                ModConfig.useCinematic = !ModConfig.useCinematic;
                 break;
             default:
                 this.mc.displayGuiScreen(this.parent);

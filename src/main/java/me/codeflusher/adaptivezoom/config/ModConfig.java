@@ -13,6 +13,7 @@ public class ModConfig {
     public static boolean useExponent2 = true;
     public static boolean useExponent3 = true;
     public static boolean useExponent4 = true;
+    public static boolean useCinematic = false;
 
     public static int currentMode = 0;
 
@@ -31,6 +32,7 @@ public class ModConfig {
             useExponent2 = config.getBoolean("Use exponential with base 2", "general", true, "Defines usage of exponential sensitivity decrease");
             useExponent3 = config.getBoolean("Use exponential with base 3", "general", true, "Defines usage of exponential sensitivity decrease");
             useExponent4 = config.getBoolean("Use exponential with base 4", "general", true, "Defines usage of exponential sensitivity decrease");
+            useCinematic = config.getBoolean("Cinematic Camera", "general", false, "Defines usage of cinematic camera");
             currentMode = config.getInt("Current mode", "general", 0, 0, ToggledData.sensModes.length - 1, "Current used mode");
         } catch (Exception e) {
             System.err.println("[AdaptiveZoom] Error in config file: " + e.getMessage());
@@ -49,6 +51,7 @@ public class ModConfig {
         config.get("general", "Use exponential with base 4", true).set(useExponent4);
 
         config.get("general", "Current mode", 0).set(currentMode);
+        config.get("general", "Cinematic Camera", false).set(useCinematic);
 
         config.save();
     }

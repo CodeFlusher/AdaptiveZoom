@@ -1,6 +1,7 @@
 package me.codeflusher.adaptivezoom.mixin;
 
 import javafx.scene.input.ZoomEvent;
+import me.codeflusher.adaptivezoom.config.ModConfig;
 import me.codeflusher.adaptivezoom.data.ScrollData;
 import me.codeflusher.adaptivezoom.settings.ModKeyBinds;
 import net.minecraft.block.Block;
@@ -29,9 +30,11 @@ public abstract class MixinFOVModifier extends EntityViewRenderEvent {
     @Inject(at = @At("HEAD"), method = "getFOV", cancellable = true)
     public void injectFovModification(CallbackInfoReturnable<Float> cir) {
         if (ModKeyBinds.zoom.isKeyDown()) {
-            Minecraft.getMinecraft().gameSettings.smoothCamera = true;
+            if (ModConfig.useCinematic){
+                Minecraft.getMinecraft().gameSettings.smoothCamera = true;
+            }
             cir.setReturnValue(fov / (1 + ScrollData.getScroll()));
-        }else{
+        }else if (ModConfig.useCinematic){
             Minecraft.getMinecraft().gameSettings.smoothCamera = false;
         }
     }
