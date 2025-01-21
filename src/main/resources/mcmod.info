@@ -1,14 +1,14 @@
 [
   {
     "modid": "${modid}",
-    "name": "Xample Mod",
-    "description": "A mod that is used as an example.",
+    "name": "Adaptive Zoom",
+    "description": "Minecraft zoom mode that allows you to change your sensitivity in it",
     "version": "${version}",
     "mcversion": "${mcversion}",
-    "url": "https://github.com/romangraef/Forge1.8.9Template/",
+    "url": "https://github.com/codeflusher/AdaptiveZoom",
     "updateUrl": "",
     "authorList": [
-      "You"
+      "CodeFlusher"
     ],
     "credits": "",
     "logoFile": "",
