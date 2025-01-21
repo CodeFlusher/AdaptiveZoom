@@ -1,4 +1,4 @@
-package com.github.codeflusher.adaptivezoom.init;
+package me.codeflusher.adaptivezoom.init;
 
 import org.spongepowered.asm.lib.tree.ClassNode;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;

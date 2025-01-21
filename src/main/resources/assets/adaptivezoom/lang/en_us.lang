@@ -1,0 +1,11 @@
+ui.adaptivezoom.scrollmode.none=Zoom sensetivity mode: Always constant
+ui.adaptivezoom.scrollmode.linear.2=Zoom sensetivity mode: Linear Decrease by factor of 2
+ui.adaptivezoom.scrollmode.linear.3=Zoom sensetivity mode: Linear Decrease by factor of 3
+ui.adaptivezoom.scrollmode.linear.4=Zoom sensetivity mode: Linear Decrease by factor of 4
+ui.adaptivezoom.scrollmode.exponential.2=Zoom sensetivity mode: Decrease by exponential formula 2^zoom
+ui.adaptivezoom.scrollmode.exponential.3=Zoom sensetivity mode: Decrease by exponential formula 3^zoom
+ui.adaptivezoom.scrollmode.exponential.4=Zoom sensetivity mode: Decrease by exponential formula 4^zoom
+
+key.adaptivezoom.zoom=Zoom
+key.adaptivezoom.toggle=Toggle Mode
+key.categories.adaptivezoom=Adaptive Zoom Keybinds
