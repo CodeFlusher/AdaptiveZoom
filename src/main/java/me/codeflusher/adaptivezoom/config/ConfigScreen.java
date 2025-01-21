@@ -46,11 +46,12 @@ public class ConfigScreen extends GuiScreen {
                 ModConfig.useExponent4 = !ModConfig.useExponent4;
                 break;
             default:
-                ModConfig.save();
-                ToggledData.reload();
                 this.mc.displayGuiScreen(this.parent);
                 break;
         }
+        ModConfig.save();
+        ToggledData.reload();
+
     }
 
     @Override
